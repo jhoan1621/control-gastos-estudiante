@@ -1,0 +1,441 @@
+/* Estilos generales */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header y navegación */
+.app-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: #34495e;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Footer */
+.app-footer {
+  background-color: #ecf0f1;
+  text-align: center;
+  padding: 1rem;
+  color: #7f8c8d;
+}
+
+/* Página de inicio */
+.inicio-container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.opciones {
+  margin: 3rem 0;
+}
+
+.botones-inicio {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.info-inicio {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.info-inicio ul {
+  list-style-position: inside;
+  padding-left: 1rem;
+}
+
+/* Formularios */
+.formulario-gasto {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.campo-formulario {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.campo-formulario label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.campo-formulario input,
+.campo-formulario select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Botones */
+.boton-principal {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-principal:hover {
+  background-color: #2980b9;
+}
+
+.boton-secundario {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-secundario:hover {
+  background-color: #7f8c8d;
+}
+
+.boton-pequeño {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  border: 1px solid #bdc3c7;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-pequeño:hover {
+  background-color: #d5dbdb;
+}
+
+.botones-formulario {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Lista de gastos */
+.lista-gastos-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sin-gastos {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  color: #7f8c8d;
+}
+
+.controles-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.botones-orden {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lista-gastos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Item de gasto */
+.gasto-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+
+.gasto-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.gasto-info {
+  flex: 1;
+}
+
+.gasto-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.gasto-emoji {
+  font-size: 1.5rem;
+}
+
+.gasto-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.gasto-detalles {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.gasto-categoria {
+  text-transform: capitalize;
+  background-color: #ecf0f1;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+}
+
+.gasto-acciones {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gasto-cantidad {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e74c3c;
+}
+
+.boton-eliminar {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.boton-eliminar:hover {
+  background-color: #c0392b;
+}
+
+/* Resumen */
+.resumen-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resumen-total {
+  background-color: #3498db;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resumen-total h3 {
+  margin: 0 0 1rem 0;
+}
+
+.total-cantidad {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.total-gastos {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.resumen-categorias {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.resumen-categorias h3 {
+  margin-top: 0;
+}
+
+.categoria-item {
+  margin-bottom: 1.5rem;
+}
+
+.categoria-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.categoria-nombre {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.categoria-cantidad {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.categoria-monto {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.monto {
+  font-weight: 600;
+  color: #e74c3c;
+}
+
+.porcentaje {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.barra-progreso {
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barra-fill {
+  height: 100%;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+.gasto-mayor {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.gasto-mayor h3 {
+  margin-top: 0;
+  color: #856404;
+}
+
+.gasto-mayor .gasto-descripcion {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.gasto-mayor .gasto-monto {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 0.5rem 0;
+}
+
+.gasto-mayor .gasto-fecha {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .nav-menu a {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .controles-lista {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .gasto-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .gasto-acciones {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
