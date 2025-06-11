@@ -12,6 +12,7 @@ function Resumen() {
   const [resumenCategorias, setResumenCategorias] = useState<ResumenCategoria[]>([])
   const [totalGeneral, setTotalGeneral] = useState(0)
 
+
   useEffect(() => {
     const gastosGuardados = localStorage.getItem('gastos')
     if (gastosGuardados) {
@@ -24,6 +25,7 @@ function Resumen() {
   const calcularResumen = (gastosData: Gasto[]) => {
     const resumen: { [key: string]: ResumenCategoria } = {}
     let total = 0
+    
 
     gastosData.forEach(gasto => {
       if (resumen[gasto.categoria]) {
@@ -37,14 +39,17 @@ function Resumen() {
         }
       }
       total += gasto.cantidad
+
     })
 
     setResumenCategorias(Object.values(resumen))
     setTotalGeneral(total)
+    
   }
 
   const calcularPorcentaje = (cantidad: number) => {
     return totalGeneral > 0 ? ((cantidad / totalGeneral) * 100).toFixed(1) : '0'
+
   }
 
   const obtenerGastoMayor = () => {
@@ -54,6 +59,7 @@ function Resumen() {
     )
   }
 
+ 
   const gastoMayor = obtenerGastoMayor()
 
   return (
@@ -69,6 +75,8 @@ function Resumen() {
           <div className="resumen-total">
             <h3>Total General</h3>
             <p className="total-cantidad">S/. {totalGeneral.toFixed(2)}</p>
+            <h3>Gasto Promedio</h3>
+            <p className="total-cantidad">S/. {(totalGeneral/gastos.length).toFixed(2 )}</p>
             <p className="total-gastos">Total de gastos registrados: {gastos.length}</p>
           </div>
 

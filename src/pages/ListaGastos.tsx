@@ -20,6 +20,16 @@ function ListaGastos() {
     }
   }
 
+  const eliminarGastoTodo = () => {
+    if (confirm('¿Estás seguro de eliminar todos los gatos?')) {
+
+      localStorage.removeItem('gastos')
+      
+      setGastos([]);
+    }
+  }
+
+
   const ordenarGastos = (criterio: 'fecha' | 'cantidad') => {
     const gastosOrdenados = [...gastos].sort((a, b) => {
       if (criterio === 'fecha') {
@@ -50,6 +60,9 @@ function ListaGastos() {
               </button>
               <button onClick={() => ordenarGastos('cantidad')} className="boton-pequeño">
                 Ordenar por cantidad
+              </button>
+              <button onClick={() => eliminarGastoTodo()} className="boton-pequeño">
+                Eliminar todos los gastos
               </button>
             </div>
           </div>

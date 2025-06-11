@@ -9,7 +9,7 @@ function AgregarGasto() {
     descripcion: '',
     cantidad: '',
     categoria: 'comida' as Gasto['categoria'],
-    fecha: new Date().toISOString().split('T')[0]
+    fecha: new Date().toISOString().split('')[0]
   })
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -25,6 +25,9 @@ function AgregarGasto() {
         fecha: formData.fecha
       }
       
+    
+    
+
       const gastosGuardados = localStorage.getItem('gastos')
       const gastos = gastosGuardados ? JSON.parse(gastosGuardados) : []
       gastos.push(nuevoGasto)

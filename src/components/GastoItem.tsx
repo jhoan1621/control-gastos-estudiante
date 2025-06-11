@@ -7,8 +7,9 @@ interface GastoItemProps {
 
 function GastoItem({ gasto, onEliminar }: GastoItemProps) {
   const formatearFecha = (fecha: string) => {
-    const date = new Date(fecha)
-    return date.toLocaleDateString('es-PE', { day: '2-digit', month: '2-digit', year: 'numeric' })
+    const date = new Date(`${fecha}T12:00:00`)
+    return date.toLocaleDateString('es-PE', { day: 'numeric', month: '2-digit', year: 'numeric' })
+    
   }
 
   const obtenerEmoji = (categoria: string) => {
@@ -33,6 +34,7 @@ function GastoItem({ gasto, onEliminar }: GastoItemProps) {
         <div className="gasto-detalles">
           <span className="gasto-categoria">{gasto.categoria}</span>
           <span className="gasto-fecha">{formatearFecha(gasto.fecha)}</span>
+          
         </div>
       </div>
       <div className="gasto-acciones">
