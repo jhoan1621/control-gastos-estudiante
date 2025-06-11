@@ -8,11 +8,7 @@ interface GastoItemProps {
 function GastoItem({ gasto, onEliminar }: GastoItemProps) {
   const formatearFecha = (fecha: string) => {
     const date = new Date(fecha)
-    return date.toLocaleDateString('es-PE', {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric'
-    })
+    return date.toLocaleDateString('es-PE', { day: '2-digit', month: '2-digit', year: 'numeric' })
   }
 
   const obtenerEmoji = (categoria: string) => {
@@ -21,6 +17,7 @@ function GastoItem({ gasto, onEliminar }: GastoItemProps) {
       transporte: '🚌',
       entretenimiento: '🎮',
       estudios: '📚',
+      salud: '🚑',
       otros: '📌'
     }
     return emojis[categoria as keyof typeof emojis] || '📌'

@@ -10,8 +10,8 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        <header className="app-header">
-          <h1>Control de Gastos - Estudiante</h1>
+        <header className="app-header color">
+          <h1 >Mi Gestor de Gastos Personales</h1>
           <nav>
             <ul className="nav-menu">
               <li><Link to="/">Inicio</Link></li>

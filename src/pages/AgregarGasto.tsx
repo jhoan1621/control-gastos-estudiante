@@ -15,6 +15,7 @@ function AgregarGasto() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     
+
     if (formData.descripcion && formData.cantidad) {
       const nuevoGasto: Gasto = {
         id: Date.now().toString(),
@@ -55,6 +56,7 @@ function AgregarGasto() {
             name="descripcion"
             value={formData.descripcion}
             onChange={handleChange}
+            minLength={3}
             placeholder="Ej: Almuerzo en la universidad"
           />
         </div>
@@ -68,7 +70,7 @@ function AgregarGasto() {
             value={formData.cantidad}
             onChange={handleChange}
             step="0.01"
-            min="0"
+            min="1"
             placeholder="0.00"
           />
         </div>
@@ -85,6 +87,7 @@ function AgregarGasto() {
             <option value="transporte">Transporte</option>
             <option value="entretenimiento">Entretenimiento</option>
             <option value="estudios">Estudios</option>
+            <option value="salud">Salud</option>
             <option value="otros">Otros</option>
           </select>
         </div>
@@ -107,6 +110,7 @@ function AgregarGasto() {
           <button type="button" onClick={() => navigate('/')} className="boton-secundario">
             Cancelar
           </button>
+          
         </div>
       </form>
     </div>
