@@ -5,6 +5,7 @@ import type { Gasto } from '../types/Gasto'
 function AgregarGasto() {
   const navigate = useNavigate()
   
+  
   const [formData, setFormData] = useState({
     descripcion: '',
     cantidad: '',

@@ -11,12 +11,12 @@ function App() {
     <Router>
       <div className="app-container">
         <header className="app-header color">
-          <h1 >Mi Gestor de Gastos Personales</h1>
+          <h1 >Mi Gestor de Ventas</h1>
           <nav>
             <ul className="nav-menu">
               <li><Link to="/">Inicio</Link></li>
-              <li><Link to="/agregar">Agregar Gasto</Link></li>
-              <li><Link to="/lista">Ver Gastos</Link></li>
+              <li><Link to="/agregar">Agregar ventas</Link></li>
+              <li><Link to="/lista">Ver Ventas</Link></li>
               <li><Link to="/resumen">Resumen</Link></li>
             </ul>
           </nav>
@@ -32,7 +32,7 @@ function App() {
         </main>
 
         <footer className="app-footer">
-          <p>Aplicación de Control de Gastos © 2025</p>
+          <p>Aplicación de Control de Ventas © 2025</p>
         </footer>
       </div>
     </Router>

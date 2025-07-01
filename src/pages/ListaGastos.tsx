@@ -2,9 +2,19 @@ import { useState, useEffect } from 'react'
 import type { Gasto } from '../types/Gasto'
 import GastoItem from '../components/GastoItem'
 
+
+
+
 function ListaGastos() {
   const [gastos, setGastos] = useState<Gasto[]>([])
+  
 
+
+  const handleChange = (e: React.FormEvent) => {
+    
+    e.preventDefault()
+  }
+  
   useEffect(() => {
     const gastosGuardados = localStorage.getItem('gastos')
     if (gastosGuardados) {
@@ -64,6 +74,22 @@ function ListaGastos() {
               <button onClick={() => eliminarGastoTodo()} className="boton-pequeño">
                 Eliminar todos los gastos
               </button>
+              <div className="campo-formulario">
+                <label htmlFor="categoria">Categoría:</label>
+                  <select
+                    id="categoria"
+                    name="categoria"
+                    
+                    onChange={handleChange}
+                     >
+                      <option value="todos">Todos</option>
+                      <option value="comida">Comida</option>
+                      <option value="transporte">Transporte</option>
+                      <option value="entretenimiento">Entretenimiento</option>
+                      <option value="estudios">Estudios</option>
+                      <option value="salud">Salud</option>
+                  </select>
+              </div>
             </div>
           </div>
 
